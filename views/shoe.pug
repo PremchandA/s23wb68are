@@ -6,8 +6,17 @@ block content
   div(class="container-fluid")
     div(class="row")
       each item,index in myresults
-        div(class="col-sm-2")
+        div(class="col-sm-2", onClick=`buy(${index})`)
           p Name of the shoe is #{item.shoeName}
           p shoe price is  #{item.shoePrice}
           p shoe is made in #{item.shoemadein}
+  
+  script.
+    function buy(N) {
+      N=N+1;
+      alert('You purchased item '+N);
+    }            
+
+
+
   
