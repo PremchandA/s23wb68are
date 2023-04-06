@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  - let myresults = [{shoeName:"Adidas",shoePrice:"100$",shoemadein:"US"},{shoeName:"puma",shoePrice:"50$",shoemadein:"Canada"},{shoeName:"nike",shoePrice:"60$",shoemadein:"australia"}]
+  div(class="container-fluid")
+    div(class="row")
+      each item,index in myresults
+        div(class="col-sm-2")
+          p Name of the shoe is #{item.shoeName}
+          p shoe price is  #{item.shoePrice}
+          p shoe is made in #{item.shoemadein}
+  
